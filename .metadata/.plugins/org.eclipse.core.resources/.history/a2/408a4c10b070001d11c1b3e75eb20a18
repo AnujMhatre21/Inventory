@@ -1,0 +1,9 @@
+package Admin;
+
+public class DeleteAdmin {
+	public static void main(String[] args) {
+		Service service=new Service();
+		service.
+	}
+
+}

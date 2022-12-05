@@ -1,0 +1,9 @@
+package Resource.Array;
+
+public class sampleArray {
+
+	public static void main(String[] args) {
+		int[]a= {10,20,30,33,45,78,95};
+	}
+
+}

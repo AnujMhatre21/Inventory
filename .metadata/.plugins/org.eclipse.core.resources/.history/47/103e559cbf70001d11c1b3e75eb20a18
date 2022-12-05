@@ -1,0 +1,10 @@
+package BankManager;
+
+public class Service {
+	Dao dao = new Dao();
+
+	public BankManager AddBM(BankManager bankManager) {
+		dao.AddBM(bankManager);
+	}
+
+}

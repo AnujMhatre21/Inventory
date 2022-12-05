@@ -1,0 +1,57 @@
+package BankManager;
+
+import java.util.List;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.EntityTransaction;
+import javax.persistence.Persistence;
+import javax.persistence.Query;
+
+public class Dao {
+	EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("Anuj");
+	EntityManager entityManager = entityManagerFactory.createEntityManager();
+	EntityTransaction entityTransaction = entityManager.getTransaction();
+
+	BankManager bankManager = new BankManager();
+
+	public BankManager AddBM(BankManager bm) {
+		bm.setStatus("UnApproved");
+		entityTransaction.begin();
+		entityManager.persist(bm);
+		entityTransaction.commit();
+		return bankManager;
+	}
+
+	public void DeleteBM(int id) {
+		BankManager bankManager = FetchDetails(id);
+		entityTransaction.begin();
+		entityManager.remove(bankManager);
+		entityTransaction.commit();
+		System.out.println("Bank Manager has been Deleted");
+	}
+
+	public int ValidateBM(String user) {
+		int fetchID = 0;
+		String sql = "Select bm From BankManager bm";
+		Query query = entityManager.createQuery(sql);
+		List<BankManager> bm = query.getResultList();
+		for (BankManager bankManager2 : bm) {
+			if (bankManager2.getEmail().equals(user)) {
+				fetchID = bankManager2.getId();
+			} else if (bankManager2.getName().equals(user)) {
+				fetchID = bankManager2.getId();
+			}else {
+				
+				System.out.println("Invalid UserName");
+			}
+		}
+		return fetchID;
+	}
+
+	public BankManager FetchDetails(int id) {
+		BankManager bankManager = entityManager.find(BankManager.class, id);
+		return bankManager;
+	}
+
+}

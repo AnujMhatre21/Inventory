@@ -1,0 +1,8 @@
+package demo;
+
+public class Father {
+	public void buildHouse() {
+		System.out.println("House build");
+	}
+
+}

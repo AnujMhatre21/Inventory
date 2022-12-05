@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;Resource.allProgramsDriver&apos; to &apos;demo&apos;&#x0D;&#x0A;- Original project: &apos;Demo&apos;&#x0D;&#x0A;- Original element: &apos;Resource.allProgramsDriver&apos;&#x0D;&#x0A;- Renamed element: &apos;Resource.demo&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;allProgramsDriver&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;Resource{allProgramsDriver.java[allProgramsDriver" matchStrategy="1" name="demo" qualified="false" references="true" similarDeclarations="false" stamp="1666083367182" textual="false" version="1.0"/>
+</session>

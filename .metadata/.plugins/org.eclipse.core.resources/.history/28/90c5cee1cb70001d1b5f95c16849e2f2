@@ -1,0 +1,17 @@
+package BankManager;
+
+import java.util.Scanner;
+
+public class TestDeleteBM {
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the UserName to be Deleted");
+		String name = sc.nextLine();
+		Service service = new Service();
+		int a=service.ValidateBM(name);
+		service.DeleteBM(a);
+		
+	}
+
+}

@@ -1,0 +1,9 @@
+package Controllers;
+
+public class TestActivateCustomer {
+	
+	public static void main(String[] args) {
+		
+	}
+
+}

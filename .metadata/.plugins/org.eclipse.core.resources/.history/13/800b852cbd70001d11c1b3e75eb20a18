@@ -1,0 +1,31 @@
+package Admin;
+
+public class Service {
+
+	Dao dao = new Dao();
+
+	public Admin SaveAdmin(Admin credentials) {
+		return dao.SaveAdmin(credentials);
+	}
+	
+	public Admin UpdateAdmin(Admin Credentials) {
+		return dao.UpdateAdmin(Credentials);
+	}
+
+
+	public void DeleteAdmin(int n) {
+		dao.DeleteAdmin(n);
+	}
+
+	public void GetAllAdmin(Admin admin) {
+		dao.GetAllAdmin();
+	}
+
+	public int ValidateUser(String user) {
+		return dao.ValidateUser(user);
+	}
+	
+	public Admin FetchDetails(int n) {
+		return dao.FetchDetaials(n);
+	}
+}

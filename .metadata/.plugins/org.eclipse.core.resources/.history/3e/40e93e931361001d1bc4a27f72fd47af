@@ -1,0 +1,27 @@
+
+package com.controller;
+
+import java.util.Scanner;
+
+import com.dao.StudentDao;
+import com.dto.Student;
+
+public class studentcontroller {
+	public static void main(String[] args) {
+		Student student = new Student();
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter your RollNo.");
+		student.setRollNo(sc.nextInt());
+		sc.nextLine();
+		System.out.println("Enter your name");
+		student.setName(sc.nextLine());
+		System.out.println("Enter the STD");
+		student.setSTD(sc.nextInt());
+		System.out.println("Enter the DIV");
+		student.setDIV(sc.next());
+
+		StudentDao studentdoa = new StudentDao();
+		studentdoa.saveStudent(student);
+
+	}
+}

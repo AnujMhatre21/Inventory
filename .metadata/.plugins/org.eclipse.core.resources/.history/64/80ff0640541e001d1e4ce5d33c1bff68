@@ -1,0 +1,12 @@
+package Resource.Array;
+
+public class Demo {
+
+	public static void main(String[] args) {
+		char []a= {'a','b','c','d'};
+	char []b=reverseArray.reverseArray(a);
+		printArray.printArrayln(a);
+		printArray.printArrayln(b);
+	}
+
+}

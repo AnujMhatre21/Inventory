@@ -1,0 +1,19 @@
+
+package com.controller;
+
+import java.util.Scanner;
+
+import com.dto.Student;
+
+public class studentcontroller {
+	public static void main(String[] args) {
+		Student student =new Student();
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter your RollNo.");
+		student.setRollNo(sc.nextInt());
+		System.out.println("Enter your name");
+		student.setName(sc.nextLine());
+		
+		
+	}
+}

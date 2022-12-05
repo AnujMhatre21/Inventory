@@ -1,0 +1,11 @@
+package Resource.Array;
+
+public class Demo {
+
+	public static void main(String[] args) {
+		int[]a= sampleArray.sampleArray();
+		printArray.printArray(a);
+		//int []b=sampleArray.sample.array(int []a);
+	}
+
+}

@@ -1,0 +1,11 @@
+package ControllerAll;
+
+import Service.ServiceBM;
+
+public class TestGetAllUnApproved {
+	public static void main(String[] args) {
+		ServiceBM service = new ServiceBM();
+		service.GetAllUnApproved();
+	}
+
+}

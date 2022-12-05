@@ -1,0 +1,10 @@
+package demo;
+
+public class Son extends Father{
+		
+			public void Son() {
+				
+			}
+	
+
+}

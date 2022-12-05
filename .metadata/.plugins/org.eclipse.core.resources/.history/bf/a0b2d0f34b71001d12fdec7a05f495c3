@@ -1,0 +1,17 @@
+package ControllerAll;
+
+import java.util.Scanner;
+
+import Service.ServiceAdmin;
+
+public class TestGetById {
+
+	public static void main(String[] args) {
+		ServiceAdmin service = new ServiceAdmin();
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the Name/Email For which you have to display The Records");
+		String name = sc.nextLine();
+		int fetchedID=service.ValidateUser(name);
+		service.GetbyId(fetchedID);	
+	}
+}

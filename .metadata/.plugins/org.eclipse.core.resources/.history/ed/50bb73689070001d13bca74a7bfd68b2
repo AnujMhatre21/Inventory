@@ -1,0 +1,39 @@
+package Admin;
+
+import java.util.Scanner;
+
+public class TestUpdate {
+	
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		Admin admin=new Admin();
+		
+		System.out.println("What do you want to update ?");
+		System.out.println("1: Change username");
+		System.out.println("2: Change Password");
+		int choice=sc.nextInt();
+		
+		
+		
+		switch (choice) {
+		case 1:{
+			System.out.println("Enter the New User");
+			String name=sc.nextLine();
+			admin.setUsername(name);
+		}
+		case 2:{
+			System.out.println("Enter the New Password");
+			String pass=sc.nextLine();
+			admin.setPassword(pass);
+		}
+			
+			break;
+
+		default:
+			break;
+		}
+		
+		
+	}
+
+}

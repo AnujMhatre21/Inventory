@@ -1,0 +1,15 @@
+package Admin;
+
+public class TestAdmin {
+	public static void main(String[] args) {
+		Admin admin=new Admin();
+		admin.setEmail("admin@gmail.com");
+		admin.setUsername("admin");
+		admin.setPassword("admin");
+		
+		Service service=new Service();
+		service.AllowAccess(admin);
+		
+	}
+
+}

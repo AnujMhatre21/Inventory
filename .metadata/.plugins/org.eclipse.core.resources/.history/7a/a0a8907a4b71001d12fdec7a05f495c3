@@ -1,0 +1,19 @@
+package BankManager;
+
+import java.util.Scanner;
+
+import ServiceAll.ServiceBM;
+
+public class TestDeleteBM {
+	public static void main(String[] args) {
+		ServiceBM service = new ServiceBM();
+		Scanner sc = new Scanner(System.in);
+
+		System.out.println("Enter the Email to be Deleted");
+		String name = sc.nextLine();
+		int a=service.ValidateBM(name);
+		service.DeleteBM(a);
+		
+	}
+
+}

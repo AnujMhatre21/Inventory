@@ -1,0 +1,10 @@
+package Resource.Array;
+
+public class sampleArray {
+
+	public static int[] sampleArray(int[]b) {
+		int[]a= {10,20,30,33,45,78,95};
+		return a;
+	}
+
+}

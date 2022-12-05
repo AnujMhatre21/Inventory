@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;resource.demo&apos; to &apos;twoDArray&apos;&#x0D;&#x0A;- Original project: &apos;Array&apos;&#x0D;&#x0A;- Original element: &apos;resource.demo&apos;&#x0D;&#x0A;- Renamed element: &apos;resource.twoDArray&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;demo&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;resource{demo.java[demo" matchStrategy="1" name="twoDArray" qualified="false" references="true" similarDeclarations="false" stamp="1663840494186" textual="false" version="1.0"/>
+</session>

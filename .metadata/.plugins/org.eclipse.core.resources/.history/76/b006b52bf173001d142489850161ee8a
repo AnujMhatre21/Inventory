@@ -1,0 +1,116 @@
+package Dao;
+
+import java.util.List;
+
+import java.util.List;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.EntityTransaction;
+import javax.persistence.Persistence;
+import javax.persistence.Query;
+
+import Dto.Customer;
+
+public class CustomerDao {
+
+	public Customer AddCustomer(Customer customer) {
+		EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("Anuj");
+		EntityManager entityManager = entityManagerFactory.createEntityManager();
+		EntityTransaction entityTransaction = entityManager.getTransaction();
+
+		customer.setStatus("INACTIVE");
+
+		entityTransaction.begin();
+		entityManager.persist(customer);
+		entityTransaction.commit();
+
+		System.out.println("Customer has been Added Successfully");
+		return customer;
+	}
+
+	public Customer UpdateCustomer(Customer customer) {
+		EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("Anuj");
+		EntityManager entityManager = entityManagerFactory.createEntityManager();
+		EntityTransaction entityTransaction = entityManager.getTransaction();
+
+		if (customer != null) {
+
+			entityTransaction.begin();
+			entityManager.merge(customer);
+			entityTransaction.commit();
+		} else {
+			System.out.println("Invalid Input");
+		}
+
+		return customer;
+	}
+
+	public void DeleteCustomer(int id) {
+		EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("Anuj");
+		EntityManager entityManager = entityManagerFactory.createEntityManager();
+		EntityTransaction entityTransaction = entityManager.getTransaction();
+
+		Customer customer = entityManager.find(Customer.class, id);
+		if (customer != null) {
+			entityTransaction.begin();
+			entityManager.remove(customer);
+			entityTransaction.commit();
+			System.out.println("Customer has been Deleted");
+		}
+	}
+
+	public void PrintAllCustomer() {
+		EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("Anuj");
+		EntityManager entityManager = entityManagerFactory.createEntityManager();
+		EntityTransaction entityTransaction = entityManager.getTransaction();
+
+		String sql = "Select c From Customer c";
+		Query query = entityManager.createQuery(sql);
+		List<Customer> cust = query.getResultList();
+		for (Customer customer : cust) {
+			System.out.println("ID: " + customer.getId());
+			System.out.println("Name: " + customer.getName());
+			System.out.println("Aadhar No: " + customer.getAadharNo());
+			System.out.println("Pan No: " + customer.getPanNo());
+			System.out.println("Status: " + customer.getStatus());
+			System.out.println("Bank Manager who Approved: " + customer.getBankmanager());
+		}
+	}
+
+	public void PrintCustomer(Customer customer) {
+		System.out.println(customer.getAadharNo());
+		System.out.println(customer.getName());
+		System.out.println(customer.getPanNo());
+		System.out.println(customer.getPno());
+
+	}
+
+	public Customer FetchCustomer(int fetchedId) {
+		EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("Anuj");
+		EntityManager entityManager = entityManagerFactory.createEntityManager();
+		EntityTransaction entityTransaction = entityManager.getTransaction();
+
+		Customer customer = entityManager.find(Customer.class, fetchedId);
+		System.out.println(customer.getAadharNo());
+
+		return customer;
+
+	}
+
+	public int FetchId(long aadhar) {
+		EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("Anuj");
+		EntityManager entityManager = entityManagerFactory.createEntityManager();
+		EntityTransaction entityTransaction = entityManager.getTransaction();
+		int fetchedId = 0;
+		String sql = "Select bm From Customer bm";
+		Query query = entityManager.createQuery(sql);
+		List<Customer> cust = query.getResultList();
+		for (Customer customer1 : cust) {
+			if (customer1.getAadharNo() == aadhar) {
+				fetchedId = customer1.getId();
+			}
+		}
+		return fetchedId;
+	}
+}

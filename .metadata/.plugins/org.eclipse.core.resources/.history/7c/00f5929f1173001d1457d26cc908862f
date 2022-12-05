@@ -1,0 +1,21 @@
+package Controllers;
+
+import com.google.protobuf.Service;
+
+import Dto.Customer;
+import Service.ServiceCustomer;
+
+public class TestAddCustomer {
+
+	public static void main(String[] args) {
+		Customer cust = new Customer();
+		cust.setName("Anuj");
+		cust.setPno(987654321);
+		cust.setAadharNo(987654321);
+		cust.setPanNo(654487);
+		cust.setStatus("ACTIVE");
+
+		ServiceCustomer customer = new ServiceCustomer();
+		customer.AddCustomer(cust);
+	}
+}

@@ -1,0 +1,18 @@
+package Controllers;
+
+import java.util.Scanner;
+
+import Service.ServiceAdmin;
+
+public class TestDeleteAdmin {
+	public static void main(String[] args) {
+		ServiceAdmin service = new ServiceAdmin();
+		Scanner sc = new Scanner(System.in);
+
+		System.out.println("Enter the Name/Email to be Deleted");
+		String input = sc.nextLine();
+		int fetchedId = service.ValidateUser(input);
+		service.DeleteAdmin(fetchedId);
+		sc.close();
+	}
+}

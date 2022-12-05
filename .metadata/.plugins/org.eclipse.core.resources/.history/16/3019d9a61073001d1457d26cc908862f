@@ -1,0 +1,12 @@
+package Service;
+
+import Dao.CustomerDao;
+import Dto.Customer;
+
+public class ServiceCustomer {
+	public Customer AddCustomer(Customer customer) {
+		CustomerDao customerDao = new CustomerDao();
+		
+		return customerDao.AddCustomer(customer);
+	}
+}

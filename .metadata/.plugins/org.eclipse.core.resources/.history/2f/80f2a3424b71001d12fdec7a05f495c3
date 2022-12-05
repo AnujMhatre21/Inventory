@@ -1,0 +1,37 @@
+package ServiceAll;
+
+import Dto.BankManager;
+
+public class ServiceBM {
+	Dao dao = new Dao();
+
+	public BankManager AddBM(BankManager bankManager) {
+		return dao.AddBM(bankManager);
+	}
+
+	public BankManager UpdateBM(BankManager bankManager) {
+
+		return dao.UpdateBM(bankManager);
+	}
+
+	public void DeleteBM(int id) {
+		dao.DeleteBM(id);
+	}
+
+	public void GetAllBankManagers() {
+		dao.GetAllBankManagers();
+	}
+
+	public void GetAllUnApproved() {
+		dao.GetAllUnApproved();
+	}
+
+	public int ValidateBM(String user) {
+		return dao.ValidateBM(user);
+	}
+
+	public BankManager FetchDetails(int id) {
+		return dao.FetchDetails(id);
+	}
+
+}

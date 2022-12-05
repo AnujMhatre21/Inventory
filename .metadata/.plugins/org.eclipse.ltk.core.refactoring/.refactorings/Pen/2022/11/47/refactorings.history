@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.pen.Controller&apos; to &apos;PenController&apos;&#x0D;&#x0A;- Original project: &apos;Pen&apos;&#x0D;&#x0A;- Original element: &apos;com.pen.Controller&apos;&#x0D;&#x0A;- Renamed element: &apos;com.pen.PenController&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Controller&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.pen{Controller.java[Controller" matchStrategy="1" name="PenController" qualified="false" references="true" similarDeclarations="false" stamp="1668759683532" textual="false" version="1.0"/>
+</session>

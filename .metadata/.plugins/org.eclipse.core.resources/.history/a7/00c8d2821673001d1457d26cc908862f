@@ -1,0 +1,51 @@
+package Dao;
+
+import java.util.List;
+
+import java.util.List;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.EntityTransaction;
+import javax.persistence.Persistence;
+import javax.persistence.Query;
+
+import Dto.Customer;
+
+public class CustomerDao {
+
+	public Customer AddCustomer(Customer customer) {
+		EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("Anuj");
+		EntityManager entityManager = entityManagerFactory.createEntityManager();
+		EntityTransaction entityTransaction = entityManager.getTransaction();
+
+		customer.setStatus("INACTIVE");
+
+		entityTransaction.begin();
+		entityManager.persist(customer);
+		entityTransaction.commit();
+
+		System.out.println("Customer has been Added Successfully");
+		return customer;
+
+	}
+
+	public int GetCustomerId(long aadhar) {
+		EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("Anuj");
+		EntityManager entityManager = entityManagerFactory.createEntityManager();
+		EntityTransaction entityTransaction = entityManager.getTransaction();
+		long fetchedId = 0;
+
+		String sql = "SELECT P FROM CUSTOMER P";
+		Query query = entityManager.createQuery(sql);
+		List<Customer> cust = query.getResultList();
+		for (Customer customer : cust) {
+			if (customer.getAadharNo().e) {
+				fetchedId = customer.getId();
+			}
+		}
+
+		return fetchedId;
+	}
+
+}

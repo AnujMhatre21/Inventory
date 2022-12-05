@@ -1,0 +1,10 @@
+package Admin;
+
+public class GetAll {
+	public static void main(String[] args) {
+		Service service = new Service();
+		Admin admin = new Admin();
+		service.GetAllAdmin(admin);
+	}
+
+}

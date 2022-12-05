@@ -1,0 +1,21 @@
+//org.eclipse.ui.commands/state/org.eclipse.ui.navigator.resources.nested.changeProjectPresentation/org.eclipse.ui.commands.radioState=false
+//org.eclipse.ui.commands/state/org.eclipse.wst.xml.views.XPathView.processor.xpathprocessor/org.eclipse.ui.commands.radioState=xpath10
+PLUGINS_NOT_ACTIVATED_ON_STARTUP=;org.eclipse.m2e.discovery;
+eclipse.preferences.version=1
+org.eclipse.ui.commands=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<org.eclipse.ui.commands>\r\n<keyBinding commandId\="org.eclipse.ui.navigate.nextTab" contextId\="org.eclipse.ui.contexts.dialogAndWindow" keyConfigurationId\="org.eclipse.ui.defaultAcceleratorConfiguration" keySequence\="CTRL+TAB"/>\r\n<keyBinding contextId\="org.eclipse.ui.contexts.dialogAndWindow" keyConfigurationId\="org.eclipse.ui.defaultAcceleratorConfiguration" keySequence\="CTRL+PAGE_UP"/>\r\n<keyBinding commandId\="org.eclipse.ui.navigate.previousTab" contextId\="org.eclipse.ui.contexts.dialogAndWindow" keyConfigurationId\="org.eclipse.ui.defaultAcceleratorConfiguration" keySequence\="CTRL+SHIFT+TAB"/>\r\n<keyBinding contextId\="org.eclipse.ui.contexts.window" keyConfigurationId\="org.eclipse.ui.defaultAcceleratorConfiguration" keySequence\="CTRL+F11"/>\r\n<keyBinding contextId\="org.eclipse.ui.contexts.dialogAndWindow" keyConfigurationId\="org.eclipse.ui.defaultAcceleratorConfiguration" keySequence\="CTRL+PAGE_DOWN"/>\r\n<keyBinding commandId\="org.eclipse.debug.ui.commands.RunLast" contextId\="org.eclipse.ui.contexts.window" keyConfigurationId\="org.eclipse.ui.defaultAcceleratorConfiguration" keySequence\="SHIFT+/"/>\r\n</org.eclipse.ui.commands>
+org.eclipse.ui.workbench.ACTIVE_NOFOCUS_TAB_BG_END=255,255,255
+org.eclipse.ui.workbench.ACTIVE_NOFOCUS_TAB_BG_START=255,255,255
+org.eclipse.ui.workbench.ACTIVE_NOFOCUS_TAB_TEXT_COLOR=16,16,16
+org.eclipse.ui.workbench.ACTIVE_TAB_BG_END=255,255,255
+org.eclipse.ui.workbench.ACTIVE_TAB_BG_START=255,255,255
+org.eclipse.ui.workbench.ACTIVE_TAB_INNER_KEYLINE_COLOR=255,255,255
+org.eclipse.ui.workbench.ACTIVE_TAB_OUTER_KEYLINE_COLOR=218,218,218
+org.eclipse.ui.workbench.ACTIVE_TAB_OUTLINE_COLOR=218,218,218
+org.eclipse.ui.workbench.ACTIVE_UNSELECTED_TABS_COLOR_END=240,240,240
+org.eclipse.ui.workbench.ACTIVE_UNSELECTED_TABS_COLOR_START=242,242,242
+org.eclipse.ui.workbench.INACTIVE_TAB_BG_START=242,242,242
+org.eclipse.ui.workbench.INACTIVE_TAB_INNER_KEYLINE_COLOR=255,255,255
+org.eclipse.ui.workbench.INACTIVE_TAB_OUTER_KEYLINE_COLOR=218,218,218
+org.eclipse.ui.workbench.INACTIVE_TAB_OUTLINE_COLOR=218,218,218
+org.eclipse.ui.workbench.INACTIVE_UNSELECTED_TABS_COLOR_END=228,228,228
+org.eclipse.ui.workbench.INACTIVE_UNSELECTED_TABS_COLOR_START=232,232,232

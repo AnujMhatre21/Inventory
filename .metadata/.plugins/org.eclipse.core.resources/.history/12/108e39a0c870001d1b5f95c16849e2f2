@@ -1,0 +1,8 @@
+package BankManager;
+
+public class TestDeleteBM {
+	public static void main(String[] args) {
+		
+	}
+
+}

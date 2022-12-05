@@ -1,0 +1,12 @@
+package Controllers;
+
+import com.google.protobuf.Service;
+
+import Service.ServiceAdmin;
+
+public class TestApprove {
+	public static void main(String[] args) {
+		ServiceAdmin service=new ServiceAdmin();
+		service.ApproveBM("Vijay@gmail.com", "demo");
+	}
+}

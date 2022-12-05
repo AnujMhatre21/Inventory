@@ -1,0 +1,21 @@
+package com.Exception;
+
+import java.io.File;
+import java.io.IOException;
+
+public class FilehandlingClass {
+	public static void main(String[] args) {
+		File file = new File("sample1.txt");
+		try {
+			if(file.createNewFile()) {
+				System.out.println("file has been created");
+			}else {
+				System.out.println("File has not been created");
+			}
+			
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+}

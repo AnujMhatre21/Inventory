@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="MavenProjectWizardLocationPage">
+		<list key="location">
+			<item value="C:\Users\hp\eclipse-workspace\one_to_many_uni"/>
+			<item value="C:\Users\hp\eclipse-workspace\Sample2"/>
+			<item value="C:\Users\hp\eclipse-workspace\JDBCdyna\src\com\dto\Student.java"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArchetypePage">
+		<item key="catalog" value="All Catalogs"/>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="Maven2ProjectWizardArchifactPage">
+		<list key="package">
+		</list>
+		<list key="groupId">
+		</list>
+		<list key="artifactId">
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArtifactPage">
+		<list key="groupId">
+			<item value="com.banking"/>
+			<item value="com.one_to_many_bi"/>
+			<item value="com.many_to_one_uni"/>
+			<item value="com.one_to_many_uni"/>
+			<item value="com.one_to_one_bi"/>
+			<item value="com.one_to_one_uni"/>
+			<item value="com.Items"/>
+			<item value="com.Project"/>
+			<item value="com.pen"/>
+			<item value="com.jsp"/>
+			<item value="Sample2"/>
+			<item value="Sample1"/>
+			<item value="com.advance"/>
+			<item value="com.Ad"/>
+			<item value="com.Advance"/>
+		</list>
+		<list key="name">
+		</list>
+		<list key="artifactId">
+			<item value="BankingApplication"/>
+			<item value="one_to_many_bi"/>
+			<item value="many_to_one_uni"/>
+			<item value="one_to_many_uni"/>
+			<item value="one_to_one_bi"/>
+			<item value="one_to_one_uni_vehicle"/>
+			<item value="one_to_one_uni"/>
+			<item value="Items"/>
+			<item value="com.Product"/>
+			<item value="Pen"/>
+			<item value="Basic-Hibernate"/>
+			<item value="Sample2"/>
+			<item value="Sample1"/>
+			<item value="sample1"/>
+			<item value="Adv"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.pom.overview">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+</section>

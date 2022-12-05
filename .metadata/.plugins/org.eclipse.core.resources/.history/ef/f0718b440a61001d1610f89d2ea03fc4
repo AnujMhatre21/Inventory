@@ -1,0 +1,9 @@
+
+package com.controller;
+
+public class studentcontroller {
+	public static void main(String[] args) {
+		Student
+		
+	}
+}

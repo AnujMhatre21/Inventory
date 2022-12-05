@@ -1,0 +1,14 @@
+package Admin;
+
+import java.util.Scanner;
+
+public class TestGetById {
+
+	public static void main(String[] args) {
+		Service service = new Service();
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the Id For which you have to display The Records");
+		int n = sc.nextInt();
+		service.GetbyId(n);
+	}
+}

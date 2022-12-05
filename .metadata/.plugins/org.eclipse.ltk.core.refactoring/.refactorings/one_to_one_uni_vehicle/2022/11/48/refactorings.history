@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move &apos;persistence.xml&apos; to &apos;META-INF&apos;" description="Move &apos;persistence.xml&apos; to &apos;META-INF&apos;" destination="src/main/resources/META-INF" element1="/one_to_one_uni_pan/src/main/resources/META-INF/persistence.xml" flags="7" id="org.eclipse.ltk.core.refactoring.move.resources" resources="1" stamp="1669279683656" updateReferences="true"/>
+</session>

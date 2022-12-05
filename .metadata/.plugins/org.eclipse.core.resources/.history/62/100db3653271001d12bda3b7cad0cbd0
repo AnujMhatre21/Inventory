@@ -1,0 +1,8 @@
+package demo;
+
+public class Mobile {
+	public void buildHouse() {
+		System.out.println("House build");
+	}
+
+}

@@ -1,0 +1,20 @@
+package BankManager;
+
+public class TestAddBM {
+	public static void main(String[] args) {
+
+		BankManager bm = new BankManager();
+		bm.setName("Vijay");
+		bm.setEmail("BM2@gmail.com");
+		bm.setPassword("Pass456");
+		bm.setStatus("UnApproved");
+		
+		Service service = new Service();
+		if(service.AddBM(bm)!=null) {
+			System.out.println("New Bank Manager is Registered");
+		}else {
+			System.out.println("Bank Manager Registration Failed");
+		}
+
+	}
+}

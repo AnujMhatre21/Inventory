@@ -1,0 +1,12 @@
+package Admin;
+
+public class Service {
+
+	public void SaveAdmin(Admin credentials) {
+
+		Dao dao = new Dao();
+		dao.SaveAdmin(credentials);
+
+	}
+
+}

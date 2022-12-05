@@ -1,0 +1,18 @@
+package Admin;
+
+import java.util.Scanner;
+
+public class DeleteAdmin {
+	public static void main(String[] args) {
+		Service service = new Service();
+		Admin admin = new Admin();
+		Scanner sc = new Scanner(System.in);
+
+		System.out.println("Enter the UserName tobe Deleted");
+		String input = sc.nextLine();
+		int fetchedId = service.ValidateUser(input);
+		service.DeleteAdmin(fetchedId);
+
+	}
+
+}

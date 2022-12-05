@@ -1,0 +1,11 @@
+package BankManager;
+
+public class Dao {
+
+	public BankManager AddBM(BankManager bankManager) {
+		
+		
+		return bankManager;
+		
+	}
+}

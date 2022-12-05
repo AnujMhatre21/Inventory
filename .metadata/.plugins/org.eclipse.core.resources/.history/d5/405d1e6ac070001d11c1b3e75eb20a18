@@ -1,0 +1,16 @@
+package BankManager;
+
+public class TestAddBM {
+	public static void main(String[] args) {
+
+		Service service = new Service();
+		BankManager bankManager = new BankManager();
+		bankManager.setName("Rathod");
+		bankManager.setEmail("BM1@gmail.com");
+		bankManager.setPassword("Pass123");
+		bankManager.setStatus("UnApproved");
+		
+		service.AddBM(bankManager);
+
+	}
+}

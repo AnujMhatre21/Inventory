@@ -1,0 +1,14 @@
+package Admin;
+
+import java.util.LinkedHashMap;
+
+public class Service {
+
+	public void AllowAccess(LinkedHashMap map1) {
+
+		Dao dao = new Dao();
+		dao.AllowAccess(map1);
+
+	}
+
+}

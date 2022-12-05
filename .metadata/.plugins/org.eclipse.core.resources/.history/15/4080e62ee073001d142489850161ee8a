@@ -1,0 +1,22 @@
+package Service;
+
+import Dao.CustomerDao;
+import Dto.Customer;
+
+public class ServiceCustomer {
+
+	public Customer AddCustomer(Customer customer) {
+		CustomerDao customerDao = new CustomerDao();
+		return customerDao.AddCustomer(customer);
+	}
+
+	public Customer UpdateCustomer(Customer customer,int id) {
+		CustomerDao customerDao = new CustomerDao();
+		return customerDao.UpdateCustomer(customer,id);
+	}
+
+	public int GetCustomerId(long aadhar) {
+		CustomerDao customerDao = new CustomerDao();
+		return customerDao.GetCustomerId(aadhar);
+	}
+}

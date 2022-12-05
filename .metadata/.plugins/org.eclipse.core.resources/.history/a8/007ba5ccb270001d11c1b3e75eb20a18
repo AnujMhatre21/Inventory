@@ -1,0 +1,72 @@
+package Admin;
+
+import java.util.List;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.EntityTransaction;
+import javax.persistence.Persistence;
+import javax.persistence.Query;
+
+public class Dao {
+
+	EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("Anuj");
+	EntityManager entityManager = entityManagerFactory.createEntityManager();
+	EntityTransaction entityTransaction = entityManager.getTransaction();
+
+	Admin admin = new Admin();
+
+	public Admin SaveAdmin(Admin credentials) {
+
+		entityTransaction.begin();
+		entityManager.persist(credentials);
+		entityTransaction.commit();
+
+		return credentials;
+	}
+
+	public void DeleteAdmin(String s) {
+		String sql = "SELECT p From Admin p";
+		Query query = entityManager.createQuery(sql);
+		List<Admin> admins = query.getResultList();
+		for (Admin p : admins) {
+			if (admins.equals(s)) {
+				entityTransaction.begin();
+				entityManager.remove(admins);
+				entityTransaction.commit();
+			}
+		}
+	}
+
+	public Admin GetRecord(Admin admin, int n) {
+		Admin admin1 = entityManager.find(Admin.class, n);
+		return admin1;
+	}
+
+	public int ValidateUser(String user) {
+		String sql = "SELECT p From Admin p";
+		Query query = entityManager.createQuery(sql);
+		List<Admin> admins = query.getResultList();
+		System.out.println(user);
+		for (Admin p : admins) {
+			if(p.getemail().equals(user)) {
+				System.out.println(p.getId());
+			}
+		}
+		return 0;
+	}
+
+	public void GetAllAdmin() {
+		String sql = "SELECT p From Admin p";
+		Query query = entityManager.createQuery(sql);
+		List<Admin> admins = query.getResultList();
+		for (Admin p : admins) {
+			System.out.println("=====================");
+			System.out.println("SrNo: " + p.getId());
+			System.out.println("Email: " + p.getemail());
+			System.out.println("Password: " + p.getPassword());
+		}
+
+	}
+
+}

@@ -1,0 +1,12 @@
+package Admin;
+
+public class Service {
+
+	public void AllowAccess(Admin credentials) {
+
+		Dao dao = new Dao();
+		dao.AllowAccess(credentials);
+
+	}
+
+}

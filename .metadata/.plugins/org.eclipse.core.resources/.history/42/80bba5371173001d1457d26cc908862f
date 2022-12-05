@@ -1,0 +1,15 @@
+package Controllers;
+
+import Dto.Customer;
+
+public class TestAddCustomer {
+
+	public static void main(String[] args) {
+		Customer cust = new Customer();
+		cust.setName("Anuj");
+		cust.setPno(987654321);
+		cust.setAadharNo(987654321);
+		cust.setPanNo(654487);
+		cust.setStatus("ACTIVE");
+	}
+}

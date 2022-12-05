@@ -1,0 +1,18 @@
+package Admin;
+
+public class TestAddAdmin {
+	public static void main(String[] args) {
+		Admin admin = new Admin();
+		admin.setEmail("sample1@gmail.com");
+		admin.setPassword("sample1");
+
+		Service service = new Service();
+		if (service.SaveAdmin(admin) != null) {
+			System.out.println("New Admin Registered");
+		} else {
+			System.out.println("New Admin Registeration Failed");
+		}
+
+	}
+
+}

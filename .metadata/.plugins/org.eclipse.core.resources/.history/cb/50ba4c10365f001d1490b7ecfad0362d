@@ -1,0 +1,23 @@
+package com.dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+
+import com.dto.Student;
+import com.util.HelperClass;
+
+public class StudentDao {
+	HelperClass helperclass=new HelperClass();
+	public void savestudent( Student student) {
+		String sql="INSERT INTO student FROM VALUES(?,?,?,?) ";
+		Connection connection=helperclass.getConnection();
+		try {
+			PreparedStatement preparedstatement=connection.prepareStatement(sql);
+			preparedstatement.setInt(1, student.getRollNo());
+			
+		}ttyl
+		
+	}
+	
+
+}

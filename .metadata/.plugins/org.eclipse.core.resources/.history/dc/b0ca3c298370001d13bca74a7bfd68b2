@@ -1,0 +1,18 @@
+package Admin;
+
+import java.util.LinkedHashMap;
+
+public class TestAdmin {
+	public static void main(String[] args) {
+
+		String username = "admin";
+		String pass = "admin";
+
+		LinkedHashMap map1 = new LinkedHashMap();
+		map1.put(username, pass);
+
+		Service service = new Service();
+		service.AllowAccess(map1);
+	}
+
+}

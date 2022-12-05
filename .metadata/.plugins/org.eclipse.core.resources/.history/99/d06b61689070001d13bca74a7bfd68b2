@@ -1,0 +1,31 @@
+package Admin;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.EntityTransaction;
+import javax.persistence.Persistence;
+
+public class Dao {
+
+	EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("Anuj");
+	EntityManager entityManager = entityManagerFactory.createEntityManager();
+	EntityTransaction entityTransaction = entityManager.getTransaction();
+
+	public Admin SaveAdmin(Admin credentials) {
+
+		entityTransaction.begin();
+		entityManager.persist(credentials);
+		entityTransaction.commit();
+		
+		return credentials;
+	}
+	
+	public void UpdateAdmin(Admin credentials) {
+		Admin admin =
+		
+		
+		return null;
+	}
+	 
+
+}

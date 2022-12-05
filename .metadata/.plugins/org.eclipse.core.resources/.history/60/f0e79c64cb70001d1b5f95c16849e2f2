@@ -1,0 +1,19 @@
+package BankManager;
+
+public class Service {
+	Dao dao = new Dao();
+
+	public BankManager AddBM(BankManager bankManager) {
+		return dao.AddBM(bankManager);
+	}
+	
+	
+	public void DeleteBM(int id) {
+		dao.DeleteBM(id);
+	}
+
+	public int ValidateBM(String user) {
+		return dao.ValidateUser(user);
+	}
+
+}

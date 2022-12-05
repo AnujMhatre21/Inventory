@@ -1,0 +1,65 @@
+package Controllers;
+
+import java.util.Scanner;
+
+import Dto.Customer;
+import Service.ServiceCustomer;
+
+public class TestUpdateCustomer {
+
+	public static void main(String[] args) {
+		Customer customer = new Customer();
+		ServiceCustomer servicecustomer = new ServiceCustomer();
+		Scanner sc = new Scanner(System.in);
+
+		System.out.println("What do you want to update ?");
+		System.out.println("1. Update Name");
+		System.out.println("2. Update Aadhar Number");
+		System.out.println("3. Update Pancard Number");
+		System.out.println("4. Update Phone Number");
+
+		int choice = sc.nextInt();
+		switch (choice) {
+		case 1:
+			System.out.println("Enter the Aadhar Number");
+			long aadhr = sc.nextLong();
+			
+			int id = servicecustomer.GetCustomerId(aadhr);
+			System.out.println("Enter New Name");
+			String name = sc.nextLine();
+			customer.setName(name);
+			servicecustomer.UpdateCustomer(customer, id);
+			break;
+
+		case 2:
+			System.out.println("Enter the Pancard Number to Validate");
+			long pan = sc.nextLong();
+			int id1 = servicecustomer.GetCustomerId(pan);
+			System.out.println("Enter New Aadhar Number");
+			long aadhr1 = sc.nextLong();
+			customer.setAadharNo(aadhr1);
+			servicecustomer.UpdateCustomer(customer, id1);
+			break;
+
+		case 3:
+			System.out.println("Enter the Aadhar Number to Validate");
+			long aadhar = sc.nextLong();
+			int id2 = servicecustomer.GetCustomerId(aadhar);
+			System.out.println("Enter New Pancard Number");
+			long pan1 = sc.nextLong();
+			customer.setAadharNo(pan1);
+			servicecustomer.UpdateCustomer(customer, id2);
+			break;
+
+		case 4:
+			System.out.println("Enter the Aadhar Number to Validate");
+			long aadhar2 = sc.nextLong();
+			int id3 = servicecustomer.GetCustomerId(aadhar2);
+			System.out.println("Enter New Mobile Number");
+			long mobile = sc.nextLong();
+			customer.setAadharNo(mobile);
+			servicecustomer.UpdateCustomer(customer, id3);
+			break;
+		}
+	}
+}

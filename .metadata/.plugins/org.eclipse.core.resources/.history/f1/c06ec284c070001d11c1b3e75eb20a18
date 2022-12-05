@@ -1,0 +1,21 @@
+package BankManager;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.EntityTransaction;
+import javax.persistence.Persistence;
+
+public class Dao {
+	EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("Anuj");
+	EntityManager entityManager = entityManagerFactory.createEntityManager();
+	EntityTransaction entityTransaction = entityManager.getTransaction();
+
+	public BankManager AddBM(BankManager bankManager) {
+		
+		entityTransaction.begin();
+		entityManager.persist(bankManager);
+		entityTransaction.commit();
+		return bankManager;
+
+	}
+}

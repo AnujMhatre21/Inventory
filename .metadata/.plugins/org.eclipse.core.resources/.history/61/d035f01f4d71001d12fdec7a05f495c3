@@ -1,0 +1,23 @@
+package Controllers;
+
+import Dto.BankManager;
+import Service.ServiceBM;
+
+public class TestAddBM {
+	public static void main(String[] args) {
+
+		BankManager bm = new BankManager();
+		bm.setName("Prabhu");
+		bm.setEmail("Prabhu@gmail.com");
+		bm.setPassword("Pass147");
+		bm.setStatus("Approved");
+		
+		ServiceBM service = new ServiceBM();
+		if(service.AddBM(bm)!=null) {
+			System.out.println("New Bank Manager is Registered");
+		}else {
+			System.out.println("Bank Manager Registration Failed");
+		}
+
+	}
+}

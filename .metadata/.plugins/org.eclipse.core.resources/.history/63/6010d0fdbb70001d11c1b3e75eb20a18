@@ -1,0 +1,53 @@
+package Admin;
+
+import java.util.Scanner;
+
+public class TestUpdate {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		Admin admin = new Admin();
+		Service service = new Service();
+
+		System.out.println("What do you want to update ?");
+		System.out.println("1: Change username");
+		System.out.println("2: Change Password");
+		int choice = sc.nextInt();
+		sc.nextLine();
+
+		switch (choice) {
+		case 1: {
+			System.out.println("Enter the Name For which you have to Change the UserName");
+			String name = sc.nextLine();
+			int fetchedId = service.ValidateUser(name);
+			if (fetchedId != 0) {
+				Admin a1 = service.FetchDetails(fetchedId);
+				System.out.println("Enter the New UserName");
+				String name1 = sc.nextLine();
+				a1.setEmail(name1);
+				service.UpdateAdmin(a1);
+			} else {
+				System.out.println("Invalid Name");
+			}
+			break;
+		}
+		case 2: {
+			System.out.println("Enter the UserName For which you have to Change Password");
+			String username = sc.nextLine();
+			int fetchedId = service.ValidateUser(username);
+			if (fetchedId != 0) {
+				Admin a1 = service.FetchDetails(fetchedId);
+				System.out.println("Enter the New Password");
+				String pass = sc.nextLine();
+				a1.setPassword(pass);
+				service.UpdateAdmin(a1);
+			} else {
+				System.out.println("Invalid UserName");
+			}
+			break;
+		}
+
+		}
+	}
+
+}

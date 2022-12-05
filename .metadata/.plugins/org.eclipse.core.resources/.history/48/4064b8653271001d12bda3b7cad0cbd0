@@ -1,0 +1,8 @@
+package demo;
+
+public class Sim1 {
+	public void buildHouse() {
+		System.out.println("House build");
+	}
+
+}
