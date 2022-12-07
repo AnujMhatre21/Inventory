@@ -6,8 +6,8 @@ public class Programs {
 	public static void main(String[] args) {
 		String s = InputString.readString();
 //		System.out.println(isAnagram(s));
-		reptletters1(s);
-		}
+		largestsmallestinString(s);
+	}
 
 //	public static void main(String[] args) {
 //	inttoString
@@ -40,6 +40,7 @@ public class Programs {
 		int max = 0;
 		for (int i = 0; i < ch.length; i++) {
 			if (ch[i].length() > max) {
+				System.out.println(ch[i]);
 			}
 		}
 	}
@@ -67,13 +68,6 @@ public class Programs {
 //	Wajp to split word in a sentence
 //	i Am an Indian
 	public static void split(String s) {
-//i
-//am
-//an
-//infian
-
-
-
 		String[] s2 = s.split(" ");
 		for (int i = 0; i < s2.length; i++) {
 			String s3 = s2[i];
@@ -185,8 +179,8 @@ public class Programs {
 
 //		==============================================================
 //		WAJP to check panagram or not
-//	The quick brown fox jumps over the lazy dog
 	public static boolean isPanagram(String s) {
+//	The quick brown fox jumps over the lazy dog
 		for (char c = 'a'; c <= 'z'; c++) {
 			if (s.indexOf(c) == -1) {
 				return false;
@@ -216,9 +210,9 @@ public class Programs {
 
 	// ==============================================================
 // Wajp to check two entered Strings are anagram or not
-//race care  SILENT LISTEN
 
 	public static boolean isAnagram(String s) {
+//race care  SILENT LISTEN
 		s = s.toLowerCase();
 		String s1 = "SILENT";
 		s1 = s1.toLowerCase();
@@ -399,7 +393,6 @@ public class Programs {
 			s2 = s2 + s1.charAt(i);
 		}
 		System.out.println(s2);
-
 	}
 
 //	===================================================
@@ -439,7 +432,6 @@ public class Programs {
 				rew2 = rew2 + s3.charAt(j);
 			}
 			rew = rew + rew2 + " ";
-
 		}
 		System.out.println(rew);
 	}
