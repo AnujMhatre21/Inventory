@@ -67,6 +67,13 @@ public class Programs {
 //	Wajp to split word in a sentence
 //	i Am an Indian
 	public static void split(String s) {
+//i
+//am
+//an
+//infian
+
+
+
 		String[] s2 = s.split(" ");
 		for (int i = 0; i < s2.length; i++) {
 			String s3 = s2[i];
