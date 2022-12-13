@@ -11,7 +11,6 @@ public class ServiceBM {
 	}
 
 	public BankManager UpdateBM(BankManager bankManager) {
-
 		return dao.UpdateBM(bankManager);
 	}
 
@@ -23,14 +22,16 @@ public class ServiceBM {
 		dao.GetAllBankManagers();
 	}
 
-	
-
 	public int ValidateBM(String user) {
 		return dao.ValidateBM(user);
 	}
 
 	public BankManager FetchDetails(int id) {
 		return dao.FetchDetails(id);
+	}
+	
+	public void ActivateCustomer(String email,String pass) {
+		dao.ActivateCustomer(email, pass);
 	}
 
 }

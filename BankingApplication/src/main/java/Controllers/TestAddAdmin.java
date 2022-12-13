@@ -10,6 +10,7 @@ public class TestAddAdmin {
 		Admin admin = new Admin();
 		Scanner sc = new Scanner(System.in);
 
+		System.out.println("Register New Admin");
 		System.out.println("Enter the Name");
 		String name = sc.nextLine();
 		admin.setName(name);
